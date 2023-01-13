@@ -1,0 +1,12 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Go code to cloud in a click!",
+  "steps": [
+    {
+      "directory": "",
+      "description": "Right-click on the azure.yaml file to run the `up` command which will provision Azure resources and deploy your code on Azure in a single step!",
+      "title": "azd up"
+    }
+  ],
+  "ref": "main"
+}

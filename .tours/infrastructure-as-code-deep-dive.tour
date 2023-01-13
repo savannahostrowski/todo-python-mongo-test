@@ -1,0 +1,29 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Infrastructure as Code Deep Dive",
+  "steps": [
+    {
+      "directory": "infra",
+      "description": "This directory contains the infrastructure-as-code (IaC) for your application. It contains either Terraform or Bicep configuration files that will be used to create the Azure resources that your application will use.\n"
+    },
+    {
+      "file": "infra/main.bicep",
+      "description": "This file is a required file for the Azure Developer CLI. It serves as the main entrypoint to defining your resources on Azure.",
+      "line": 1
+    },
+    {
+      "file": "infra/main.parameters.json",
+      "description": "This is a required file for the Azure Developer CLI. It includes all parameters needed by the `main.bicep` file.",
+      "line": 1
+    },
+    {
+      "directory": "infra/app",
+      "description": "In this directory, you'll find files organized by component and functionality. In this application, we have:\n- an`api.bicep` - defines resources needed for the backend of the application (API)\n- a `db.bicep` - defines the resources needed for a database\n- a `web.bicep` - defines the resources needed for the frontend of the application\n\nYou'll also see two files related to `apim`. These files are not used by default in the provisioning of you application on Azure. If you are interested in using Azure API Management (APIM) as part of your project's architecture, check out [this blog post](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-january-2023-release/#updated-templates-todo-application-now-with-apim-support)."
+    },
+    {
+      "directory": "infra/core",
+      "description": "This directory is included as a reference library. It contains all the building blocks (Bicep modules) used by the `azd` templates that our team has authored. We plan to upstream these modules eventually to a Bicep registry."
+    }
+  ],
+  "ref": "main"
+}

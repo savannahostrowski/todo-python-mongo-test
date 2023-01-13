@@ -1,0 +1,42 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "What's in this template?",
+  "steps": [
+    {
+      "file": "azure.yaml",
+      "description": "Every repository that is Azure Developer CLI-compatible (which we call a template) contains an `azure.yaml` file.\n\nThe `azure.yaml` file is used to describe the application, its components and the types of Azure resources that will be created and used to get your application up and running on Azure. In the `azure.yaml`, you can also specify the directory where your source code is so that the Azure Developer CLI can use it to build and deploy your application on Azure.\n\nYou can see the schema [here](https://learn.microsoft.com/en-us/azure/developer/azure-developer-cli/azd-schema).",
+      "line": 1
+    },
+    {
+      "directory": "src",
+      "description": "This `src/` directory contains sample source code. You can modify it, remove it, or replace it with your own source code.\n\nIf you change the directory structure or name of the `src/` directory, you'll want to update the `azure.yaml` file's project property so that the tool can find your project source code for build and deployment.",
+      "title": "src/ - application source code"
+    },
+    {
+      "directory": "infra",
+      "description": "This `infra/` directory contains the infrastructure-as-code (IaC) for your application. It contains either Terraform or Bicep configuration files that will be used to create the Azure resources that your application will use.",
+      "title": "infra/ - infrastructure-as-code"
+    },
+    {
+      "directory": ".github/workflows",
+      "description": "This `.github/workflows/` directory contains the GitHub Actions workflows that will be used to build and deploy your application on Azure.\n\n You can modify these workflows to customize the build and deployment process for your application. This template contains a GitHub Action to test your code against real Azure resources. By default, the Azure Developer CLI will use the GitHub Actions as its CI/CD provider.\n\n",
+      "title": ".github/workflows/ - GitHub Actions workflows"
+    },
+    {
+      "directory": ".azdo",
+      "description": "This `.azdo/` directory contains the Azure DevOps pipelines that will be used to build and deploy your application on Azure.\n\n You can modify these pipelines to customize the build and deployment process for your application. This template contains an Azure DevOps pipeline to test your code against real Azure resources.\n\n You can set Azure Pipelines as your CI/CD provider by following the instructions [here](https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-october-2022-release/#azure-pipelines-support-as-a-ci-cd-provider)",
+      "title": ".azdo/ - Azure DevOps pipelines"
+    },
+    {
+      "directory": ".devcontainer",
+      "description": "The `.devcontainer/` directory contains a configuration if you want to develop your application in a containerized environment. In this template, you'll find that the configuration includes key extensions to help enhance your cloud application development productivity! You can learn more about development containers [here](https://code.visualstudio.com/docs/remote/containers).",
+      "title": ".devcontainer/ - development container configuration"
+    }, 
+    {
+      "directory": ".vscode",
+      "description": "The `.vscode/` directory contains configuration files for development in Visual Studio Code. It contains a `launch.json` file to define debug configurations and a `tasks.json` file to define the configurations to start the web or API server for local development.",
+      "title": ".vscode/ - Visual Studio Code configuration"
+    }
+  ],
+  "ref": "main"
+}
